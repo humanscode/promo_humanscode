@@ -1,0 +1,145 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 40px;
+    max-width: 800px;
+    border-radius: 10px;
+    position: relative;
+    overflow-y: auto;
+    max-height: 90vh;
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .modal-gallery {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .modal-gallery img {
+    width: 100%;
+    max-width: 230px;
+    border-radius: 8px;
+  }
+  @media (max-width: 1024px) {
+    .modal-content {
+      padding: 30px;
+      max-width: 90%;
+    }
+  
+    .modal-gallery img {
+      max-width: 200px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .modal-content {
+      padding: 20px;
+      max-width: 95%;
+      max-height: 85vh;
+    }
+  
+    .modal-gallery {
+      justify-content: center;
+      gap: 8px;
+    }
+  
+    .modal-gallery img {
+      max-width: 100%;
+      width: 100%;
+    }
+  
+    .modal-close {
+      top: 10px;
+      right: 14px;
+      font-size: 20px;
+    }
+  }
+  .burger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.burger span {
+  width: 26px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .hc-nav {
+    display: none;
+  }
+
+  .hc-nav.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: linear-gradient(135deg, rgba(222,166,98,0.8), rgba(187,106,241,0.8));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 24px;
+    gap: 20px;
+    z-index: 1000;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.3s ease;
+  }
+
+  .hc-nav.open a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s;
+  }
+
+  .hc-nav.open a:hover {
+    opacity: 0.75;
+  }
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

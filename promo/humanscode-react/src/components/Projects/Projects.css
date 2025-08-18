@@ -1,0 +1,246 @@
+/* Projects.css */
+
+.projects {
+  padding: 100px 0;
+  background: linear-gradient(to top, #000000, #1a0033);
+  color: #fff;
+}
+
+.projects-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  background: linear-gradient(to right, #ffffff, #00bfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-move 6s ease-in-out infinite;
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.project-card {
+  background-color: #111;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-thumb {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  background: #1c1c1c;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 900px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  color: #fff;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.modal-gallery {
+  margin-bottom: 24px;
+}
+
+.modal-image {
+  width: 100%;
+  border-radius: 8px;
+}
+.modal-gallery-nav {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.modal-gallery-nav button {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #666;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  opacity: 0.5;
+}
+
+.modal-gallery-nav button:hover {
+  opacity: 0.8;
+  transform: scale(1.5);
+  background: #888;
+}
+
+.modal-gallery-nav button.active {
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, #00bfff, #87ceeb);
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 0 6px rgba(0, 191, 255, 0.5), 0 0 12px rgba(0, 191, 255, 0.3);
+  border-radius: 2px;
+}
+.modal-content h3 {
+  font-size: 28px;
+  margin-bottom: 16px;
+  background: linear-gradient(to right, #ffffff, #00bfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-move 6s ease-in-out infinite;
+}
+
+.modal-content p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.modal-content p strong {
+  color: #ccc;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.modal-buttons a {
+  padding: 12px 20px;
+  background: linear-gradient(to right, #ffffff, #00bfff);
+  color: #000;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.modal-buttons a:hover {
+  opacity: 0.8;
+}
+@media (max-width: 1024px) {
+  .projects-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .project-card {
+    padding: 16px;
+  }
+
+  .modal-content h3 {
+    font-size: 24px;
+  }
+
+  .modal-content p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 60px 20px;
+  }
+
+  .projects-title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .projects-grid {
+    gap: 24px;
+  }
+
+  .project-card {
+    padding: 14px;
+  }
+
+  .modal {
+    padding: 20px;
+  }
+
+  .modal-content h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .modal-content p {
+    font-size: 14px;
+  }
+
+  .modal-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .modal-buttons a {
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 15px;
+  }
+
+  .modal-close {
+    top: 8px;
+    right: 12px;
+    font-size: 24px;
+  }
+
+  .modal-gallery-nav {
+    gap: 6px;
+  }
+}

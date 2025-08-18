@@ -1,0 +1,43 @@
+.thank-you-section {
+    background: linear-gradient(135deg, #2a004f, #000000);
+    min-height: 100vh;
+    padding: 100px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .thank-you-container {
+    max-width: 600px;
+    color: #fff;
+  }
+  
+  .thank-you-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .thank-you-text {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .thank-you-button {
+    display: inline-block;
+    padding: 14px 32px;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 10px;
+    color: #000;
+    background: linear-gradient(to right, #dea662, #ffc98f);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .thank-you-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 201, 143, 0.4);
+  }
+  

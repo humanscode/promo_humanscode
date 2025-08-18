@@ -1,0 +1,177 @@
+.hc-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 1000;
+  padding: 16px 0;
+}
+
+.header-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hc-logo {
+  height: 150px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.hc-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.hc-nav a {
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Gilroy', sans-serif;
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.hc-nav a:hover {
+  opacity: 0.7;
+}
+
+.hc-button {
+  background-color: #ffffff;
+  color: #03000e;
+  font-family: 'Gilroy', sans-serif;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.hc-button:hover {
+  background-color: #220145;
+}
+
+@media (max-width: 768px) {
+  .hc-nav,
+  .hc-button {
+    display: none;
+  }
+}
+
+/* Существующие стили оставить */
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Мобильное меню */
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .hc-nav,
+  .hc-button {
+    display: none;
+  }
+
+  .hc-nav.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 24px;
+    background-color: #111;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 10px;
+    z-index: 999;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .hc-nav.open a {
+    font-size: 18px;
+  }
+}
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.burger span {
+  width: 26px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .hc-nav {
+    display: none;
+  }
+
+  .hc-nav.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: linear-gradient(135deg, rgba(222,166,98,0.8), rgba(187,106,241,0.8));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 24px;
+    gap: 20px;
+    z-index: 1000;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.3s ease;
+  }
+
+  .hc-nav.open a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s;
+  }
+
+  .hc-nav.open a:hover {
+    opacity: 0.75;
+  }
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

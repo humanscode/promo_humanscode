@@ -1,0 +1,70 @@
+.about {
+    padding: 100px 0;
+    background-color: #fff;
+  }
+  
+  .about-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+  
+  .about-text {
+    flex: 1 1 480px;
+  }
+  .container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  
+  .about-title {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color:  #220145;
+    margin-bottom: 20px;
+  }
+  
+  .about-description {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+  
+  .about-button {
+    display: inline-block;
+    background-color: #dea662;
+    color: #000;
+    font-family: 'Gilroy', sans-serif;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .about-button:hover {
+    background-color: #c48a48;
+  }
+  
+  .about-image img {
+    max-width: 480px;
+    width: 100%;
+    border-radius: 12px;
+  }
+  
+  @media (max-width: 768px) {
+    .about-inner {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+  
+    .about-button {
+      margin: 0 auto;
+    }
+  }
+  
