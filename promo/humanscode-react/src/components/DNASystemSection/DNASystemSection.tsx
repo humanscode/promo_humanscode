@@ -38,7 +38,7 @@ const DNASystemSection: React.FC = () => {
           </a>
         </div>
       </div>
-    </section>
+    </section>у
   );
 };
 
