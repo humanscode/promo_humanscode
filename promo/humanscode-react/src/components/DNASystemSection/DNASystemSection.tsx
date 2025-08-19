@@ -38,8 +38,9 @@ const DNASystemSection: React.FC = () => {
           </a>
         </div>
       </div>
-    </section>у
+    </section>
   );
-};
+}
+
 
 export default DNASystemSection;
