@@ -10,15 +10,15 @@ const Footer: React.FC = () => {
 
        <div className="footer-links">
   <a href="tel:+380665792665" className="footer-link">
-   Позвонити
+   Подзвонити
   </a>
   <a
-    href="https://t.me/humanscode.ua"
+    href="https://www.instagram.com/humanscode.ua/"
     target="_blank"
     rel="noopener noreferrer"
     className="footer-link"
   >
-    Telegram
+   Instagram
   </a>
   <a
     href="https://t.me/humanscode_tech"
@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
     rel="noopener noreferrer"
     className="footer-link"
   >
-    Читати нас  в телеграм
+    Читай нас  в телеграм
   </a>
 </div>
 
