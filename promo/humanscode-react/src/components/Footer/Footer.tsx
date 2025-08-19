@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
    Подзвонити
   </a>
   <a
-    href="https://www.instagram.com/humanscode.ua/"
+    href="https://www.instagram.com/humanscode_/"
     target="_blank"
     rel="noopener noreferrer"
     className="footer-link"
